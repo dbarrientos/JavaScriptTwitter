@@ -45,6 +45,16 @@ Twit.guardar = function(){
 	localStorage.setItem('twits', twitsEncode);
 }
 
+Twit.obtenerTwits = function(){
+	var twitsEncoded = localStorage.getItem('twits');
+	var twits = JSON.parse(twitsEncoded);
+	Twit.twits = twits;
+
+}
+
+Twit.obtenerTwits();
+Twit.mostrar();
+
 
 /*<article>
 	<h2>Título</h2>
