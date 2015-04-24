@@ -47,8 +47,15 @@ Twit.guardar = function(){
 
 Twit.obtenerTwits = function(){
 	var twitsEncoded = localStorage.getItem('twits');
-	var twits = JSON.parse(twitsEncoded);
-	Twit.twits = twits;
+	//console.log(twitsEncoded);  Validacion en caso que twitEncoded sea null
+	if (twitsEncoded != null) {
+		var twits = JSON.parse(twitsEncoded);
+		Twit.twits = twits;
+	}else{
+		var twits = JSON.parse(twitsEncoded);
+		Twit.twits = [];
+	}
+
 
 }
 
