@@ -39,6 +39,11 @@ Twit.mostrar = function(){
 
 }
 
+Twit.guardar = function(){
+	var twits = Twit.twits;
+	var twitsEncode = JSON.stringify(twits);
+	localStorage.setItem('twits', twitsEncode);
+}
 
 
 /*<article>
